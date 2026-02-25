@@ -1,0 +1,10 @@
+services:
+  app:
+    image: webdevops/php-apache:7.1
+    container_name: aldmic_test
+    ports:
+      - "8080:80"
+    volumes:
+      - ./:/app
+    environment:
+      - WEB_DOCUMENT_ROOT=/app/laravel/public
