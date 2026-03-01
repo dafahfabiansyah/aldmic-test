@@ -13,6 +13,17 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+// Public routes
+Route::post('/login', 'API\AuthController@login');
+
+// Protected routes
+Route::middleware('auth:api')->group(function () {
+    // Auth routes
+    Route::post('/logout', 'API\AuthController@logout');
+    Route::get('/user', 'API\AuthController@user');
+    
+    // Movie routes
+    Route::get('/movies/search', 'API\MovieController@search');
+    Route::get('/movies/{imdbId}', 'API\MovieController@show');
 });
+

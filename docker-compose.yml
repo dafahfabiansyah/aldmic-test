@@ -1,10 +1,19 @@
 services:
   app:
-    image: webdevops/php-apache:7.1
-    container_name: aldmic_test
-    ports:
-      - "8080:80"
+    build: .
+    container_name: aldmic_app
+    working_dir: /app/laravel
     volumes:
-      - ./:/app
+      - .:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - mysql
+
+  mysql:
+    image: mysql:5.7
+    container_name: aldmic_mysql
+    restart: always
     environment:
-      - WEB_DOCUMENT_ROOT=/app/laravel/public
+      MYSQL_ROOT_PASSWORD: dafah2545
+      MYSQL_DATABASE: aldmic_test

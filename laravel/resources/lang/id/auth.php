@@ -4,7 +4,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Authentication Language Lines
+    | Authentication Language Lines (Indonesian)
     |--------------------------------------------------------------------------
     |
     | The following language lines are used during authentication for various
@@ -13,11 +13,11 @@ return [
     |
     */
 
-    'failed' => 'These credentials do not match our records.',
-    'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
-    'validation_failed' => 'Validation failed.',
-    'login_success' => 'Login successful.',
-    'logout_success' => 'Logout successful.',
-    'logout_failed' => 'Logout failed.',
+    'failed' => 'Kredensial ini tidak cocok dengan data kami.',
+    'throttle' => 'Terlalu banyak percobaan login. Silakan coba lagi dalam :seconds detik.',
+    'validation_failed' => 'Validasi gagal.',
+    'login_success' => 'Login berhasil.',
+    'logout_success' => 'Logout berhasil.',
+    'logout_failed' => 'Logout gagal.',
 
 ];
